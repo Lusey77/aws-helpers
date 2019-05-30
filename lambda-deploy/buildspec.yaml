@@ -15,10 +15,12 @@ phases:
   build:
     commands:
       - tsc
+      - mv dist/index.js ../index.js
+      - mv node_modules/ ../node_modules
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
     files:
-      - 'lambda-deploy/dist/**/*'
-      - 'lambda-deploy/node_modules/**/*'
+      - 'index.js'
+      - 'node_modules/**/*'
