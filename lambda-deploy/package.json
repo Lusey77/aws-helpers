@@ -1,0 +1,24 @@
+{
+  "name": "lambda-deploy",
+  "version": "1.0.0",
+  "description": "Service to deploy a new version of lambda when S3 bucket changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lusey77/aws-helpers/lambda-deploy"
+  },
+  "keywords": [
+    "lambda",
+    "deploy",
+    "pipeline",
+    "aws"
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.465.0"
+  },
+  "author": "Kaleb Luse (kaleb@luse.email)",
+  "license": "MIT"
+}
