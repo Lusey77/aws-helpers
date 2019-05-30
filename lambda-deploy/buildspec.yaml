@@ -19,5 +19,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
     files:
-      - 'dist/**/*'
-      - 'node_modules/**/*'
+      - 'lambda-deploy/dist/**/*'
+      - 'lambda-deploy/node_modules/**/*'
