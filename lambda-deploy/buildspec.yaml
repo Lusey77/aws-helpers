@@ -13,7 +13,7 @@ phases:
       - echo Build started on `date`
   build:
     commands:
-      - tsc lambda-deploy
+      - tsc -p lambda-deploy
   post_build:
     commands:
       - echo Build completed on `date`
