@@ -20,4 +20,3 @@ phases:
 artifacts:
     files:
       - './dist/*'
-    name: lambda-deploy
