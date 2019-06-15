@@ -15,12 +15,12 @@ phases:
   build:
     commands:
       - tsc
-      - mv dist\index.js ..\
-      - mv node_modules ..\
+      - mv dist/index.js ../
+      - mv node_modules ../
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
     files:
       - index.js
-      - node_modules\
+      - node_modules/**/*
