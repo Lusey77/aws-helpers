@@ -21,7 +21,7 @@ phases:
       - cd artifacts
       - zip -qr ../aws-helpers-lambda-deploy.zip ./
       - cd ../
-      - mv aws-helpers-lambda-deploy.zip aws-helpers-lambda-deploy
+      - mv aws-helpers-lambda-deploy.zip ../aws-helpers-lambda-deploy
   post_build:
     commands:
       - echo Build completed on `date`
