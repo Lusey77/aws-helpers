@@ -14,15 +14,13 @@ phases:
       - echo Build started on `date`
   build:
     commands:
-      - mkdir artifacts
       - tsc
-      - mv dist/index.js artifacts
-      - mv node_modules artifacts
-      - cd artifacts
-      - zip -qr ../../aws-helpers-lambda-deploy.zip ./
+      - mv dist/index.js ../
+      - mv node_modules ../
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
     files:
-      - aws-helpers-lambda-deploy.zip
+      - index.js
+      - node_modules
