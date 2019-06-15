@@ -19,7 +19,7 @@ phases:
       - mv dist/index.js artifacts
       - mv node_modules artifacts
       - cd artifacts
-      - zip -qr ../aws-helpers-lambda-deploy.zip artifacts
+      - zip -qr ../aws-helpers-lambda-deploy.zip ./
       - cd ../
       - mv aws-helpers-lambda-deploy.zip aws-helpers-lambda-deploy
   post_build:
