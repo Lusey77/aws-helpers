@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo Installing source NPM dependencies...
+      - cd update-build-number/
+      - npm install -g typescript@2.9.2
+      - npm install
+  pre_build:
+    commands:
+      - echo Build started on `date`
+  build:
+    commands:
+      - tsc
+      - mv dist/index.js ../
+      - mv node_modules ../
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - index.js
+    - node_modules/**/*
