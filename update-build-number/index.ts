@@ -44,12 +44,16 @@ export const handler = async (event: CloudWatchEvent<CodeBuildStateChange>, cont
         return Promise.reject("Failed");
     }
 
-    const buildNumber = parseInt(getBuildNumberResponse.Parameter.Value);
+    const buildNumber = getBuildNumberResponse.Parameter.Value.split('.');
+    
+    const patchVersion = parseInt(buildNumber[2]) + 1;
+    
+    const newBuildNumber = `${buildNumber[0]}.${buildNumber[1]}.${patchVersion}`;
 
     const setBuildNumberParams = {
         Name: parameterName,
         Type: 'String',
-        Value: (buildNumber + 1).toString(),
+        Value: newBuildNumber,
         Overwrite: true
     };
 
